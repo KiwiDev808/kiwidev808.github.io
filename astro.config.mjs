@@ -9,11 +9,9 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import { expressiveCodeOptions } from './src/site.config'
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 
-
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kiwidev808.github.io',
-	base: '/personal-blog',
+	site: "https://kiwidev808.github.io",
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
@@ -41,5 +39,4 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'static',
 })
