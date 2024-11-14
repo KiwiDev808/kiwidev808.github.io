@@ -13,6 +13,7 @@ import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://kiwidev808.github.io',
+	base: '/personal-blog',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
