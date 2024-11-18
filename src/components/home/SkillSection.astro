@@ -1,0 +1,27 @@
+---
+import Section from '../Section.astro'
+import SkillLayout from '../SkillLayout.astro'
+
+const skills = {
+	Languages: ['Typescript', 'Javascript', 'Python', 'Golang'],
+	Frameworks: ['NestJS', 'React', 'Vue.js', 'Express', 'Fastify'],
+	Databases: ['MySQL', 'MongoDB', 'DynamoDB', 'DocumentDB'],
+	Tools: [
+		'Git',
+		'Github',
+		'Docker',
+		'Kubernetes',
+		'Linux',
+		'AWS',
+		'Serverless Framework',
+		'Kafka',
+		'New Relic',
+		'Fortify',
+		'Sonar'
+	]
+}
+---
+
+<Section title='Skills'>
+	{Object.entries(skills).map(([title, skills]) => <SkillLayout title={title} skills={skills} />)}
+</Section>

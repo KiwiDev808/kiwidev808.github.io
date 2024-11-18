@@ -1,0 +1,39 @@
+---
+import Card from '../Card.astro'
+import Section from '../Section.astro'
+
+interface Props {
+	education: {
+		title: string
+		instituition: string
+		period: string
+		description: string
+		attributions: string[]
+	}[]
+}
+
+const { education } = Astro.props
+---
+
+<Section title='Education'>
+	{
+		education.map(({ title, instituition, period, description, attributions }) => {
+			return (
+				<Card
+					heading={title}
+					subheading={instituition}
+					date={period}
+					altText='Lorem, ipsum dolor sit'
+					imageClass='h-12 w-auto md:-left-16'
+				>
+					<p class='text-muted-foreground'>{description}</p>
+					<ul class='ml-4 list-disc text-muted-foreground'>
+						{attributions.map((attr) => (
+							<li>{attr}</li>
+						))}
+					</ul>
+				</Card>
+			)
+		})
+	}
+</Section>
