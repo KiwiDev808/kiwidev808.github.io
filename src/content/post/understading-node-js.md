@@ -10,13 +10,13 @@ In 2009, at JSConf EU, Ryan Dahl stepped onto the stage to present something tha
 
 ## The Birth of Node.js
 
-Ryan Dahl's journey started far from the tech world - studying mathematics and even working on random projects like a snowboard marketing website in South America. His path to creating Node.js began when he was working in Germany, where he moved closer to lower-level technologies in the web stack[^2].
+Ryan Dahl's journey started far from the tech world - studying mathematics and even working on random projects like a snowboard marketing website in South America. His path to creating Node.js began when he was working in Germany, where he moved closer to lower-level technologies in the web stack[^1].
 
 The main frustration came from the limitations of existing web servers like Apache in handling concurrent connections. Each new connection would spawn a new thread, consuming system memory and eventually leading to performance issues.
 
 The traditional approach was like having a waiter at a restaurant who could only serve one table at a time, completing the entire service before moving to the next customer. Dahl envisioned something different: a waiter who could take orders from multiple tables, submit them to the kitchen, and serve other customers while waiting for the orders to be prepared.
 
-> "My original goal with Node was to force developers to easily build optimal servers by forcing them to only use async IO... What I want to make is a non-blocking infrastructure so that you can make very highly concurrent servers, and you don't need to know about it." - Ryan Dahl[^2]
+> "My original goal with Node was to force developers to easily build optimal servers by forcing them to only use async IO... What I want to make is a non-blocking infrastructure so that you can make very highly concurrent servers, and you don't need to know about it." - Ryan Dahl[^1]
 
 ## The Building Blocks
 
@@ -86,7 +86,7 @@ The output demonstrates how Node.js handles asynchronous operations:
 
 ## Community Impact and Growth
 
-Node.js's growth was remarkable after its introduction. Isaac Schlueter, who would later create npm, initially dismissed Node.js but gave it a second chance after another developer's recommendation. This led to the creation of the Node Package Manager (npm) in 2010, which revolutionized how developers shared and reused code[^2].
+Node.js's growth was remarkable after its introduction. Isaac Schlueter, who would later create npm, initially dismissed Node.js but gave it a second chance after another developer's recommendation. This led to the creation of the Node Package Manager (npm) in 2010, which revolutionized how developers shared and reused code[^1].
 
 Key milestones in Node.js history:
 - 2009: First presentation at JSConf EU
@@ -98,7 +98,7 @@ Key milestones in Node.js history:
 
 ### The Corporate Chapter: Joyent
 
-The relationship between Node.js and Joyent marked an important chapter in its history. While the partnership provided necessary resources, it also brought challenges in reconciling corporate interests with community governance. This eventually led to significant community discussions and the creation of io.js, though the projects would later merge back together[^2].
+The relationship between Node.js and Joyent marked an important chapter in its history. While the partnership provided necessary resources, it also brought challenges in reconciling corporate interests with community governance. This eventually led to significant community discussions and the creation of io.js, though the projects would later merge back together[^1].
 
 ## Technical Evolution
 
