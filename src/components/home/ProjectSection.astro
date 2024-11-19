@@ -2,26 +2,27 @@
 import ProjectCard from '../ProjectCard.astro'
 import Section from '../Section.astro'
 
-const projects = []
+const projects = [
+	{
+		href: 'https://github.com/KiwiDev808/url-shortener',
+		heading: 'Coming soon...',
+		subheading: 'URL shortener',
+		imagePath: '/src/assets/coming-soon.png',
+		altText: 'Coming soon...'
+	}
+]
 ---
 
 <Section title='Projects'>
 	<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
-		<ProjectCard
-			href='https://www.google.com'
-			heading='Consectetur'
-			subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-			imagePath='/src/assets/coming-soon.png'
-			altText='Example'
-			class='w-full sm:w-1/2'
-		/>
-		<ProjectCard
-			href='https://www.google.com'
-			heading='Coming soon...'
-			subheading=''
-			imagePath='/src/assets/coming-soon.png'
-			altText='Lorem, ipsum dolor sit'
-			class='w-full sm:w-1/2'
-		/>
+		{projects.map((project, index) => (
+			<ProjectCard 
+				as='a'
+				href={project.href}
+				heading={project.heading}
+				subheading={project.subheading}
+				imagePath={project.imagePath}
+				altText={project.altText}
+			/>))}
 	</div>
 </Section>

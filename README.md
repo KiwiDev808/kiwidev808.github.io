@@ -1,41 +1,60 @@
 # Astro Resume
 
-## Features
+A modern, minimal, and customizable resume/blog website built with Astro v4 and TailwindCSS.
 
-- Astro v4
-- TailwindCSS utility classes
-- ESLint / Prettier pre-installed and pre-configured
-- Accessible, semantic HTML markup
-- Responsive & SEO-friendly
-- Dark / Light mode, using Tailwind and CSS variables (referenced from shadcn)
-- [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimised images
-- MD & [MDX](https://docs.astro.build/en/guides/markdown-content/#mdx-only-features) posts
-- Pagination
-- [Automatic RSS feed](https://docs.astro.build/en/guides/rss)
-- Auto-generated [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
-- [Expressive Code](https://expressive-code.com/) source code and syntax highlighter
+## 🚀 Features
 
-## Credits
+- **Framework & Styling**
+  - Astro v4
+  - TailwindCSS utility classes
+  - ESLint / Prettier pre-installed and pre-configured
+  - Dark / Light mode using Tailwind and CSS variables (referenced from shadcn)
 
-- [astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) for blog design
-- [minirezume-framer](https://minirezume.framer.website/) for resume homepage design
+- **Performance & SEO**
+  - Accessible, semantic HTML markup
+  - Responsive & SEO-friendly
+  - [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimized images
+  - Auto-generated [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
 
-## Project Structure
+- **Content Management**
+  - MD & [MDX](https://docs.astro.build/en/guides/markdown-content/#mdx-only-features) posts
+  - Pagination
+  - [Automatic RSS feed](https://docs.astro.build/en/guides/rss)
+  - [Expressive Code](https://expressive-code.com/) source code and syntax highlighter
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Quick Start
+
+```bash
+# Clone this repository
+git clone [your-repo-url]
+
+# Navigate to the project
+cd astro-resume
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 📂 Project Structure
 
 ```text
 ├── public/
 ├── src/
     ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
 |   ├── pages/
 |   ├── styles/
 |   ├── utils/
 |   ├── site.config.ts
-│   └── types.ts
+│   └── types.ts
 ├── .elintrc.cjs
 ├── .gitignore
 ├── .prettierignore
@@ -46,34 +65,49 @@ Inside of your Astro project, you'll see the following folders and files:
 └── tsconfig.json
 ```
 
-## Editing guide
+## 📝 Customization Guide
 
-### Site info
+### Site Configuration
+- Edit site info (title, description) in `src/site.config.ts`
 
-To edit site info such as site title and description, edit the `src/site.config.ts` file.
+### Content Management
+- **Resume Homepage**: Edit `src/pages/index.astro`
+- **Blog Posts**: Add `.md` files to `src/content/`
+- **Blog Images**: Create a folder in `src/content/`, add both `.md` and image files, reference images in markdown
 
-### Page contents
+### Component Customization
+- **Page Components**: Edit files in `src/components/`
+- **Base Layout**: Modify `src/layouts/BaseLayout.astro`
+- **Blog Post Layout**: Update `src/layouts/BlogPost.astro`
 
-To edit the resume homepage content and design, edit the `src/pages/index.astro` file.
+### Theming
+1. **Colors**: Edit `src/styles/app.css`
+2. **Fonts**: 
+   - Add font files to `/public`
+   - Define `@font-face` in `src/styles/app.css`
+   - Add to `fontFamily` in `tailwind.config.js`
+   - Apply in `body` tag of `src/layouts/BaseLayout.astro`
 
-### Page components
+## 🤝 Contributing
 
-To edit page components found site-wide such as the card used in the homepage, edit the files found in the `src/components/` directory.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Layouts
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To edit the base layouts of all pages, edit the `src/layouts/BaseLayout.astro` file.
+## 💐 Credits
 
-To edit the layout of a blog article, edit the `src/layouts/BlogPost.astro` file.
+This project draws inspiration from:
+- [astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) for blog design
+- [minirezume-framer](https://minirezume.framer.website/) for resume homepage design
 
-### Blog content
+## 📄 License
 
-To add blog content, insert `.md` files in the `src/content/` directory.
+This project is licensed under the [MIT] License - see the [LICENSE](LICENSE) file for details.
 
-To add images in blog articles, insert a folder in the `src/content/` directory, add both the `.md` and image files into the new folder, and reference the image in your `.md` file.
+---
 
-## Theming
-
-To change the theme colours of the site, edit the `src/styles/app.css` file.
-
-To change the fonts of the site, add your font files into `/public`, add it as a `@font-face` in the `src/styles/app.css` file, as a `fontFamily` in the `tailwind.config.js` file, and apply the new font class to the `body` tag in the `src/layouts/BaseLayout.astro` file.
+Made with ❤️ using [Astro](https://astro.build)

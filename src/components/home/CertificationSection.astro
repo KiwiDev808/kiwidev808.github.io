@@ -1,25 +1,24 @@
 ---
 import Card from '../Card.astro'
 import Section from '../Section.astro'
+
+const certications = [
+	{course: 'Software Engineer Intern Certificate', company: 'HackerRank', period: 'Aug 2024', link: 'https://www.hackerrank.com/certificates/46c294c7a792'},
+	{course: 'Advanced Architecting on AWS', company: 'Amazon Web Services (AWS)', period: 'Feb 2023', link: 'https://media.licdn.com/dms/image/v2/D4D2DAQG4A6TiYOt2Kw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1723225678339?e=1732561200&v=beta&t=sNQgxLfLR2yx4QV_wqdVokG7rYDoYlItgKur3f42pDM'},
+	{course: 'Clean Code and Clean Architecture', company: 'branas.io', period: 'Sep 2021', link: 'https://app.branas.io/api/public/certificates/9c0e835f-ab50-4a51-847b-8e682ccbc828/share'},
+]
 ---
 
 <Section title='Certifications'>
-	<Card
-		as='a'
-		heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-		date='Mar 2024 - Mar 2024'
-		altText='Lorem, ipsum dolor sit'
-		imageClass='h-11 w-auto md:-left-16'
-		href='https://www.google.com'
-	/>
-	<Card
-		as='a'
-		heading='Lorem ipsum, dolor sit amet'
-		subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-		date='Mar 2029 - Mar 2032'
-		altText='Lorem, ipsum dolor sit'
-		imageClass='h-11 w-auto md:-left-16'
-		href='https://www.google.com'
-	/>
+	{certications.map((certification, index) => (
+		<Card
+			as='a'
+			heading={certification.course}
+			subheading={certification.company}
+			date={certification.period}
+			altText={certification.course}
+			imageClass='h-11 w-auto md:-left-16'
+			href={certification.link}
+		/>
+	))}
 </Section>
